@@ -1,16 +1,17 @@
-// src/index.tsx
-
 import React from 'react';
-import { AppRegistry } from 'react-native';
-import { name as appName } from '../app.json';
-import { Provider } from 'react-redux';
-import App from '../App';
-import store from './store/store';
+import { View, Text } from 'react-native'; 
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import RootNavigation from './navigation/RootNavigation';
 
-const Main = () => (
-  <Provider store={store}>
-    <App />
-  </Provider>
-);
+const App = () => {
+  return (
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <SafeAreaProvider>
+        <RootNavigation />
+      </SafeAreaProvider>
+    </GestureHandlerRootView>
+  );
+};
 
-AppRegistry.registerComponent(appName, () => Main);
+export default App;

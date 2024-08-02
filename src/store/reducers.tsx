@@ -1,4 +1,3 @@
-// src/store/reducers.ts
 
 import { combineReducers } from 'redux';
 

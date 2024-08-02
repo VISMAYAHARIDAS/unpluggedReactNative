@@ -1,4 +1,3 @@
-// src/service/api.ts
 
 export const fetchData = async (endpoint: string): Promise<any> => {
     try {
