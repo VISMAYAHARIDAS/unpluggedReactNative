@@ -18,6 +18,7 @@ const TabNavigator = () => {
         tabBarStyle: {
           display: 'flex', 
         },
+        headerShown:false
       }}
     >
       <Tab.Screen
